@@ -27,8 +27,9 @@ class AuthenticationTest extends TestCase
 
         /** @var User $user */
         $user = auth('sanctum')->user();
-        $this->assertAuthenticated();
+
         $response->assertJson($user->toArray());
+        $this->assertAuthenticated();
     }
 
     public function test_users_can_not_authenticate_with_invalid_bearer_token()
@@ -38,6 +39,6 @@ class AuthenticationTest extends TestCase
             'accept' => 'application/json'
         ]);
 
-        $response->assertForbidden();
+        $response->assertUnauthorized();
     }
 }
