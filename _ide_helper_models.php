@@ -12,6 +12,19 @@
 
 namespace App\Models{
 /**
+ * App\Models\Car
+ *
+ * @method static \Database\Factories\CarFactory factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|Car newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Car newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Car query()
+ * @mixin \Eloquent
+ */
+	class IdeHelperCar {}
+}
+
+namespace App\Models{
+/**
  * App\Models\User
  *
  * @property int $id
