@@ -35,7 +35,7 @@ class CarFactory extends Factory
     public function definition()
     {
         return [
-            'model' => array_rand(self::CAR_MODELS, 1)
+            'model' => self::CAR_MODELS[array_rand(self::CAR_MODELS, 1)]
         ];
     }
 }

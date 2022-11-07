@@ -20,7 +20,7 @@ class AuthenticationTest extends TestCase
         ]);
 
         $token = $registerResponse->json()['access_token'];
-        $response = $this->get('/api/user', [
+        $response = $this->get('/api/authentificated-user', [
             'authorization' => 'Bearer ' . $token,
             'accept' => 'application/json'
         ]);
